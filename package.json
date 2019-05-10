@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "git-remote-origin-url": "^3.0.0",
     "json-loader": "^0.5.7",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
@@ -11,17 +12,21 @@
     "react-scripts": "^3.0.1"
   },
   "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "https://ccapeng.github.io/doc-react",
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "homepage": "https://ccapeng.github.io/doc-react"
+  ]
 }
