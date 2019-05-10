@@ -1,0 +1,41 @@
+<div class="cc-search" role="search">
+  <div class="form-group hide">
+    <input type="text" class="form-control cc-search-input" placeholder="Search...">
+  </div>
+  <button type="button" class="btn cc-btn cc-btn-icon cc-btn-single cc-js-search">
+    <i class="ci ci-search"></i>
+  </button>
+</div>
+
+<script>
+  $(function(){
+    $('.cc-js-search').on('click',function(){
+      $(this).toggleClass('cc-btn-search')
+        .closest('.cc-search')
+        .find('.form-group')
+        .toggleClass('hide')
+    })
+  })
+</script>
+<pre class="code">
+&lt;div class="cc-search" role="search"&gt;
+  &lt;div class="form-group hide"&gt;
+    &lt;input type="text" class="form-control cc-search-input" placeholder="Search..."&gt;
+  &lt;/div&gt;
+  &lt;button type="button" class="btn cc-btn cc-btn-icon cc-btn-single cc-js-search"&gt;
+    &lt;i class="ci ci-search"&gt;&lt;/i&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(function(){
+    $('.cc-js-search').on('click',function(){
+      $(this).toggleClass('cc-btn-search')
+        .closest('.cc-search')
+        .find('.form-group')
+        .toggleClass('hide')
+    })
+  })
+&lt;/script&gt;
+
+</pre>

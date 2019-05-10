@@ -1,0 +1,27 @@
+{
+  "name": "doc-react",
+  "version": "1.1.1",
+  "private": true,
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "json-loader": "^0.5.7",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^3.0.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "homepage": "https://ccapeng.github.io/doc-react"
+}

@@ -1,0 +1,112 @@
+<div class="cc-toolbar">
+  <div class="cc-toolbar-btns">
+    <button class="cc-btn cc-primary slide-out">Slide Out</button>
+    <br><br>
+    <button class="cc-btn cc-primary slide-imm">Show immediate</button>
+    <br><br>
+    <button class="cc-btn cc-primary slide-backdrop">Show with backdrop</button>
+    <br><br>
+    <button class="cc-btn slide-hide">Hide</button>
+  </div>
+</div>
+<div class="cc-aside" id="my-aside">
+  <div class="cc-h-area">
+    <h1 class="cc-h">Title</h1>
+    <div class="cc-h-tool">
+      <button class="cc-btn2 ci ci-close cc-icon" data-cc-dismiss="aside" aria-label="Close" title="Close">
+      </button>
+    </div>
+  </div>
+  <div class="cc-section">
+    <p>
+      To submit your project ideas, will be used by professional project manager to communicate with you one on one,
+      and builds up the elite team, project process transparent traceability,
+      to help you quickly complete products to submit your project ideas,
+      will be used by professional project manager to communicate with you one on one, and builds up the elite team,
+      project process transparent traceability,
+      to help you quickly complete products to submit your project ideas.
+    </p>
+    <p>
+      Will be used by professional project manager to communicate with you one on one, and builds up the elite team,
+      project process transparent traceability, help you to quickly finish products To submit
+      your project ideas, will be used by professional project manager to communicate with you one on one,
+      and builds up the elite team, project process transparent traceability, to help you quickly complete
+      products to submit your project ideas, will be used by professional project manager to communicate
+      with you one on one
+    </p>
+  </div>
+</div>
+
+<script>
+$(".slide-out").on("click",function(){
+  $("#my-aside").ccAslide({
+    placement:"right",
+    width:340
+  })}
+);
+$(".slide-hide").on("click",
+  function(){
+    $("#my-aside").ccAslide('hide');
+  }
+);
+$(".slide-imm").on("click",function(){
+  $("#my-aside").ccAslide({
+    duration: 0,
+    placement:"right",
+    width:340
+  });
+});
+$(".slide-backdrop").on("click",function(){
+  $("#my-aside").ccAslide({
+    backdrop:true,
+    clickBackDropClose:true,
+    duration: 0,
+    placement:"right",
+    width:340
+  });
+});
+</script>
+
+<xmp class="code">
+  <div class="cc-aside" id="my-aside">
+    <div class="cc-h-area">
+      <h1 class="cc-h">Title</h1>
+      <div class="cc-h-tool">
+        <button type="button" class="cc-btn2 ci ci-close cc-tip cc-tip-right" data-cc-dismiss="aside" aria-label="Close">
+        </button>
+      </div>
+    </div>
+    <div class="cc-section">
+      ...
+    </div>
+  </div>
+  <script>
+  $(".slide-out").on("click",function(){
+    $("#my-aside").ccAslide({
+      placement:"right",
+      width:340
+    })}
+  );
+  $(".slide-hide").on("click",
+    function(){
+      $("#my-aside").ccAslide('hide');
+    }
+  );
+  $(".slide-imm").on("click",function(){
+    $("#my-aside").ccAslide({
+      duration: 0,
+      placement:"right",
+      width:340
+    });
+  });
+  $(".slide-backdrop").on("click",function(){
+    $("#my-aside").ccAslide({
+      backdrop:true,
+      clickBackDropClose:true,
+      duration: 0,
+      placement:"right",
+      width:340
+    });
+  });
+  </script>
+</xmp>

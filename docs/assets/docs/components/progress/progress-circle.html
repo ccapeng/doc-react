@@ -1,0 +1,59 @@
+<div class="col-sm-4">
+  <div class="cc-progress-circle demo1">
+    <strong></strong>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="cc-progress-circle demo2">
+    <strong></strong>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="cc-progress-circle demo3">
+    <strong></strong>
+  </div>
+</div>
+<script>
+  $(function(){
+    $('.demo1').circleProgress({
+      startAngle:-360,
+      value: 0.9,
+      fill: { gradient: ['#37b4e3', '#1ca8dd'] }
+    }).on('circle-animation-progress', function(event, progress,stepValue) {
+      $(this).find('strong').html(parseInt(100 * stepValue) + '<i>%</i>');
+    });
+    $('.demo2').circleProgress({
+      startAngle:-360,
+      value: 0.7,
+      fill: { gradient: ['#25ad7d', '#25ad7d'] }
+    }).on('circle-animation-progress', function(event, progress,stepValue) {
+      $(this).find('strong').html(parseInt(100 * stepValue) + '<i>%</i>');
+    });
+    $('.demo3').circleProgress({
+      startAngle:-360,
+      value: 0.5,
+      fill: { gradient: ['#ff9900', '#ff9900'] }
+    }).on('circle-animation-progress', function(event, progress,stepValue) {
+      $(this).find('strong').html(parseInt(100 * stepValue) + '<i>%</i>');
+    });
+  })
+</script>
+<pre class="code">
+&lt;div class="cc-progress-circle"&gt;
+  &lt;strong&gt;&lt;/strong&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  $(function(){
+    $('.cc-progress-circle').circleProgress({
+      startAngle:-360,
+      value: 0.9,
+      fill: { gradient: ['#37b4e3', '#1ca8dd'] }
+    }).on('circle-animation-progress', function(event, progress,stepValue) {
+      $(this).find('strong').html(parseInt(100 * stepValue) + '&lt;i&gt;%&lt;/i&gt;');
+    });
+  })
+&lt;/script&gt;
+&ltscript src="static/lib/js/jquery/circle-progress.js"&gt;&lt;/script&gt;
+
+</pre>
+<script src="static/lib/js/jquery/circle-progress.js"></script>

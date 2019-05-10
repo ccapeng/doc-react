@@ -1,0 +1,29 @@
+.slogan {
+  color: #999;
+  font-size: 20px;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.slogan .version {
+  color: #7266BA;
+  padding: 5px;
+}
+
+.slogan .publish {
+  color: #25ad7d;
+}
+
+.download-components {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.download-components a {
+  padding: 15px 45px;
+  min-height: 50px;
+}
+
+ul, li {
+  list-style: none;
+}

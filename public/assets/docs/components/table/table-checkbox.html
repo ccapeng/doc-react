@@ -1,0 +1,85 @@
+<table class="table table-hover cc-table" summary="Student List table sort by name">
+  <caption class="sr-only">
+    Student List Table
+  </caption>
+  <thead>
+  <tr>
+    <th scope="col">All</th>
+    <th scope="col">Name</th>
+    <th scope="col">Desc</th>
+    <th scope="col" class="text-left">Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <label class="cc-input-beauty cc-checkbox-beauty cc-checkbox-info">
+        <input type="checkbox" name="table"><span></span>
+      </label>
+    </td>
+    <td>Username</td>
+    <td>The description words...</td>
+    <td class="text-left">10/12/2015</td>
+  </tr>
+  <tr>
+    <td>
+      <label class="cc-input-beauty cc-checkbox-beauty cc-checkbox-info">
+        <input type="checkbox" name="table"><span></span>
+      </label>
+    </td>
+    <td>Username</td>
+    <td>The description words...</td>
+    <td class="text-left">10/12/2015</td>
+  </tr>
+  </tbody>
+</table>
+<pre class="code">
+&lt;table class="table table-bordered table-hover cc-table" summary=""&gt;
+  &lt;caption class="sr-only"&gt;
+    Table
+  &lt;/caption&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th scope="col"&gt;All&lt;/th&gt;
+    &lt;th scope="col"&gt;Name&lt;/th&gt;
+    &lt;th scope="col"&gt;Desc&lt;/th&gt;
+    &lt;th scope="col" class="text-left"&gt;Date&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;label class="cc-input-beauty cc-checkbox-beauty cc-checkbox-info"&gt;
+      &lt;input type="checkbox"&gt;&lt;span&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;/td&gt;
+    &lt;td&gt;Username&lt;/td&gt;
+    &lt;td&gt;The description words...&lt;/td&gt;
+    &lt;td class="text-left"&gt;10/12/2015&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;label class="cc-input-beauty cc-checkbox-beauty cc-checkbox-info"&gt;
+        &lt;input type="checkbox"&gt;&lt;span&gt;&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/td&gt;
+    &lt;td&gt;Username&lt;/td&gt;
+    &lt;td&gt;The description words...&lt;/td&gt;
+    &lt;td class="text-left"&gt;10/12/2015&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</pre>
+<script>
+  $(function () {
+    $('input[type=checkbox]').on('click', function () {
+      var _target = $(this);
+      if (_target.is(':checked')) {
+        _target.closest('tr').css('background', '#f5f5f5')
+      } else {
+        _target.closest('tr').css('background', '#fff')
+      }
+    })
+  })
+</script>

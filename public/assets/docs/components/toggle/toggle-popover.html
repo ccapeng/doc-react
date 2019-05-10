@@ -1,0 +1,58 @@
+<div id="tgl-popover">
+<style>
+.bmk-reci-label{display:inline-block;padding:0.5rem;width:10rem;}
+</style>
+<div class="dropdown">
+  <button type="button" name="panel" class="cc-btn cc-btn-toggle" id="bmk-reci-btn" aria-expanded="false" aria-controls="bmk-reci-panel" data-toggle="collapse" data-target="#bmk-reci-panel">
+    Recipients
+  </button>
+  <div class="dropdown-menu" id="bmk-reci-panel" tabindex="-1" aria-expanded="false">
+    <div class="popover bottom cc-popover collapse in cc-padding" style="min-width:25rem">
+      <div class="arrow cc-popover-arrow-l"></div>
+      <label for="bmk-group_Host" class="bmk-reci-label cc-">
+        <input id="bmk-group_Host" checked="" name="targetMembers" value="host" type="checkbox">
+        Host
+      </label>
+      <label for="bmk-group_Admin" class="bmk-reci-label">
+        <input id="bmk-group_Admin" checked="" name="targetMembers" value="admin" type="checkbox">
+        Admin
+      </label>
+      <label for="bmk-group_Faculty" class="bmk-reci-label">
+        <input id="bmk-group_Faculty" checked="" name="targetMembers" value="faculty" type="checkbox">
+        Faculty
+      </label>
+      <label for="bmk-group_Student" class="bmk-reci-label">
+        <input id="bmk-group_Student" name="targetMembers" value="student" type="checkbox">
+        Student
+      </label>
+      <label for="bmk-group_Employee" class="bmk-reci-label">
+        <input id="bmk-group_Employee" name="targetMembers" value="employee" type="checkbox">
+        Employee
+      </label>
+      <label for="bmk-group_Alumni" class="bmk-reci-label">
+        <input id="bmk-group_Alumni" name="targetMembers" value="alumni" type="checkbox">
+        Alumni
+      </label>
+      <label for="bmk-group_User" class="bmk-reci-label">
+        <input id="bmk-group_User" name="targetMembers" value="user" type="checkbox">
+        User
+      </label>
+      <label for="bmk-group_Applicant" class="bmk-reci-label">
+        <input id="bmk-group_Applicant" name="targetMembers" value="applicant" type="checkbox">
+        Applicant
+      </label>
+      <label for="bmk-group_Author" class="bmk-reci-label">
+        <input id="bmk-group_Author" name="targetMembers" value="author" type="checkbox">
+        Author
+      </label>
+      <label for="bmk-group_Guest" class="bmk-reci-label">
+        <input id="bmk-group_Guest" name="targetMembers" value="guest" type="checkbox">
+        Guest
+      </label>
+    </div>
+  </div>
+</div>
+</div>
+<xmp class="code" id="tgl-popover-code">
+</xmp>
+<script>$("#tgl-popover-code").text($("#tgl-popover").html())</script>
