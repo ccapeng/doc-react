@@ -429,7 +429,7 @@
           "items" : [
             {
               "title" : "Note List",
-              "url" : "assets/docs/components/note/node-list.html"
+              "url" : "assets/docs/components/note/note-list.html"
             },
             {
               "title" : "Note Paragraph",
