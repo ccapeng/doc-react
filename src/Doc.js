@@ -1,5 +1,7 @@
-import Docs from './docs.json';
+async function fetchDoc() {
+  const response = fetch("/asset/doc.json");
+  return response.json();
+}
+const Doc = fetchDoc(); 
 
-const Doc = Docs; 
-console.log(Doc);
 export default Doc;

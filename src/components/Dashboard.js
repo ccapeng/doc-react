@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import DocService from '../DocService.js';
 
 class Dashboard extends Component {
 
-  createSectionList(section){
+  createSectionList(section, index){
 
     return (
-      <section>
+      <section key={"sec" + index}>
         <h2 className="cc-h">{section.subheader}</h2>
         <div className="cc-section-panel cc-panel cc-panel-body cc-panel-border">
           <div className="cc-indent-lg">
@@ -26,7 +25,7 @@ class Dashboard extends Component {
       return;
     }
     return (
-      <li key={topic.is} className="col-md-3 col-sm-12">
+      <li key={topic.id} className="col-md-3 col-sm-12">
         <Link to={`topic/${topic.id}`}>
           {topic.name}
         </Link>
@@ -38,7 +37,7 @@ class Dashboard extends Component {
     let sections = DocService.getSections();
     return (
       <div>
-        {sections.map((obj,i) => this.createSectionList(obj))}
+        {sections.map((obj,i) => this.createSectionList(obj, i))}
       </div>
     );
   }

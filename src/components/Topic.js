@@ -8,7 +8,7 @@ class Topic extends Component {
     this.topicID = props.match.params.topic;
     let topic = DocService.getTopic(this.topicID);
     this.topicComp = topic;
-    this.topicName = topic.name;
+    this.topicName = topic.name;  
   }
   
   getItemContent(itemId, url) {
@@ -19,8 +19,13 @@ class Topic extends Component {
       obj.innerHTML = html;
       let scripts = obj.getElementsByTagName("script");
       for (let i=0; i<scripts.length; i++) {
-        let s = scripts[i].textContent;
-        eval(s);
+        let tag = scripts[i];
+        if(!tag.src){
+          var script = document.createElement('script');
+          let text = scripts[i].textContent;
+          script.appendChild( document.createTextNode( text ) );
+          document.getElementsByTagName('head')[0].appendChild(script);
+        }
       }
     })
   }
@@ -31,12 +36,15 @@ class Topic extends Component {
       itemKey = itemKey.substring(itemKey.lastIndexOf("/")+1, itemKey.lastIndexOf("."));
       return itemKey;
     }
-    var s = [];
-    var len = this.topicComp.items.length;
+    let s = [];
+    let len = this.topicComp.items.length;
+    let prefix = process.env.PUBLIC_URL;
+
     for (let i=0; i<len; i++) {
       let item = this.topicComp.items[i];
       let title = item.title;
-      let url = "/"+item.url;
+      let url = (prefix !== "") ? prefix : "";
+      url += "/" + item.url;
       let id = this.topicID + i;
       let itemId = getItemKey(item.url); 
       s.push(
