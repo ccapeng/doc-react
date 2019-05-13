@@ -39,7 +39,6 @@ function getAllTopics() {
 
 const DocService = {
   init:function(callback) {
-console.log("DocService.init()");
     fetchDoc(callback);
   },
   getHeader: function() {
