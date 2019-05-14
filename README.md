@@ -71,7 +71,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ## How to put up your document?
 
 Define docs.json under public/assets like the following :
-...
+```
 {
   "header": "UI Componenet Document",
   "sections" : [
@@ -87,13 +87,13 @@ Define docs.json under public/assets like the following :
               "title" : "Icon",
               "url" : "assets/docs/components/avatar/avatar-icon-md.html"
             },
-            ......
+            ...
           ]
         },
-        ......
+        ...
       ]
     }
-    ......
+    ...
   ]
 }
-...
+```
