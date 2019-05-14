@@ -1,3 +1,7 @@
+import React from 'react';
+
+export const DocContext = React.createContext([{}, () => {}]);
+
 let isTopicArraryReady = false;
 let topics = [];
 let doc = {};

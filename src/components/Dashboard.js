@@ -1,43 +1,53 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import DocService from '../DocService.js';
 
-class Dashboard extends Component {
-
-  createSectionList(section, index){
-
-    return (
-      <section key={"sec" + index}>
-        <h2 className="cc-h">{section.subheader}</h2>
-        <div className="cc-section-panel cc-panel cc-panel-body cc-panel-border">
-          <div className="cc-indent-lg">
-            <ul className="cc-list row cc-flex-list">
-              {section.topics.map((obj,i) => this.createTopicList(obj))}
-            </ul>
-          </div>
+const SectionList = (props) => {
+  const {section, index} = props;
+  return (
+    <section key={"sec" + index}>
+      <h2 className="cc-h">{section.subheader}</h2>
+      <div className="cc-section-panel cc-panel cc-panel-body cc-panel-border">
+        <div className="cc-indent-lg">
+          <ul className="cc-list row cc-flex-list">
+            {
+              section.topics.map((obj,i) => (
+                <TopicList key={"topiclist" + i} topic={obj} /> 
+              ))
+            }
+          </ul>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+  
+}
 
-  createTopicList(topic){
-    if (!topic.name) {
-      return;
-    }
-    return (
-      <li key={topic.id} className="col-md-3 col-sm-12">
-        <Link to={`topic/${topic.id}`}>
-          {topic.name}
-        </Link>
-      </li>
-    );
+const TopicList = (props)=> {
+  const {topic} = props;
+  if (!topic.name) {
+    return "";
   }
+  return (
+    <li key={topic.id} className="col-md-3 col-sm-12">
+      <Link to={{
+        pathname:`topic/${topic.id}`,
+        state:{topic}
+      }}>
+        {topic.name}
+      </Link>
+    </li>
+  );
+}
 
-  render() {
-    let sections = DocService.getSections();
+const Dashboard = (props) => {
+  const {sections} = props;
+  if (typeof(sections) == "undefined") {
+    return <div></div>
+  } else {
     return (
-      <div>
-        {sections.map((obj,i) => this.createSectionList(obj, i))}
+      <div> {sections.map((section,i) =>
+            <SectionList key={"sectionlist" + i} section={section} index={i} />
+          )}
       </div>
     );
   }

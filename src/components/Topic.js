@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import DocService from '../DocService.js'
 
 class Topic extends Component {
 
   constructor(props) {
     super();
     this.topicID = props.match.params.topic;
-    let topic = DocService.getTopic(this.topicID);
+    const {topic} = props.location.state;
     this.topicComp = topic;
     this.topicName = topic.name;  
   }

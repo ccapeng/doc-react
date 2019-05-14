@@ -6,17 +6,22 @@ import DocService from './DocService.js'
 import Dashboard from './components/Dashboard';
 import Topic from './components/Topic';
 
+//const DocContext = React.createContext();
 
 class Index extends React.Component {
 
   state = {
-    header: ""
+    header: "",
+    sections: []
   }
 
   setHeader = () => {
     let header = DocService.getHeader();
+    let sections = DocService.getSections();
+console.log(sections);
     this.setState({
-      "header": header
+      "header": header,
+      "sections": sections
     });
   }
 
@@ -46,7 +51,7 @@ class Index extends React.Component {
                 <div/> 
               ) : (
                 <Switch>
-                  <Route exact path="/" component={Dashboard}/>
+                  <Route exact path="/" render={() => <Dashboard sections={this.state.sections}/> } />
                   <Route path="/topic/:topic" component={Topic}/>
                 </Switch>
               )
