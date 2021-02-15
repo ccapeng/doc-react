@@ -6,8 +6,6 @@ import DocService from './DocService.js'
 import Dashboard from './components/Dashboard';
 import Topic from './components/Topic';
 
-//const DocContext = React.createContext();
-
 class Index extends React.Component {
 
   state = {
@@ -18,7 +16,6 @@ class Index extends React.Component {
   setHeader = () => {
     let header = DocService.getHeader();
     let sections = DocService.getSections();
-console.log(sections);
     this.setState({
       "header": header,
       "sections": sections
@@ -45,7 +42,7 @@ console.log(sections);
           </div>
         </div>
         <div className="cc-body">
-          <div className="container" id="container">
+          <div className="container cc-padding" id="container">
             {
               this.state.header === "" ? ( 
                 <div/> 
