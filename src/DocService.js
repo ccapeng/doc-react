@@ -10,9 +10,7 @@ let isDocReady = false;
 function fetchDoc(callback) {
   try {
     if(!isDocReady) {
-      let prefix = process.env.PUBLIC_URL;
-      let url = (prefix !== "") ? prefix : "";
-      url += "/assets/docs.json";
+      let url = "/assets/docs.json";
       fetch(url)
         .then( response => response.json())
         .then( json => {

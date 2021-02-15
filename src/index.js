@@ -32,7 +32,7 @@ class Index extends React.Component {
 
   render() {
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <>
         <div className="cc-h-area cc-nav">
           <div className="container cc-padding">

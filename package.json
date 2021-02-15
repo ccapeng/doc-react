@@ -1,7 +1,6 @@
 {
   "name": "doc-react",
   "version": "1.2.0",
-  "private": true,
   "dependencies": {
     "json-loader": "^0.5.7",
     "react": "^16.8.3",
@@ -14,13 +13,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && copy build\\index.html build\\404.html",
-    "heroku-postbuild": "npm run build"
+    "predeploy": "npm run build && copy build\\index.html build\\404.html"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://ccapeng.github.io/doc-react/",
   "browserslist": [
     ">0.2%",
     "not dead",
