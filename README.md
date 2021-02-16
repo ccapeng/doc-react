@@ -1,5 +1,11 @@
 # HTML Document with React
 
+It's for some well formatted html document and want to put them together. 
+
+There are some other react base document management. 
+Gatsby is another kind of headless CMS, but still need to have strong skill of react.
+In the project, you will find how easy to incorporate html document and to further customization.
+
 In the project directory, you can run `npm start`.  
 [Live demo in heroku](https://doc-react.herokuapp.com/)
 
